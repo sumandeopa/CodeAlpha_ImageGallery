@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.gallery-item {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.gallery-item:nth-child(1) {
+  background-image: url('imagee/flower.jpg');
+}
+.gallery-item:nth-child(2) {
+  background-image: url('imagee/nature.jpg');
+}
+.gallery-item:nth-child(3) {
+  background-image: url('imagee/img2.jpeg');
+}
+.gallery-item:nth-child(4) {
+  background-image: url('imagee/plant.jpg');
+}
+.gallery-item:nth-child(5) {
+  background-image: url('imagee/sunrise.jpg');
+}
+.gallery-item:nth-child(6) {
+  background-image: url('imagee/water.jpg');
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+}
+.lightbox-content {
+  margin-top: 5%;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: white;
+  padding: 20px;
+  user-select: none;
+}
+.prev { left: 0; }
+.next { right: 0; }
+.prev:hover, .next:hover, .close:hover {
+  color: #ff9800;
+}

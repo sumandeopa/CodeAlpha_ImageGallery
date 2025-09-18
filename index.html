@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Image Gallery</h1>
+  <div class="gallery">
+    <div class="gallery-item" data-src="imagee/flower.jpg" onclick="openLightbox(this)"></div>
+    <div class="gallery-item" data-src="imagee/nature.jpg" onclick="openLightbox(this)"></div>
+    <div class="gallery-item" data-src="imagee/img2.jpeg" onclick="openLightbox(this)"></div>
+    <div class="gallery-item" data-src="imagee/plant.jpg" onclick="openLightbox(this)"></div>
+    <div class="gallery-item" data-src="imagee/sunrise.jpg" onclick="openLightbox(this)"></div>
+    <div class="gallery-item" data-src="imagee/water.jpg" onclick="openLightbox(this)"></div>
+  </div>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+  <script src="script.js"></script>
+  git init 
+</body>
+</html>
